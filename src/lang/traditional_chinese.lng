@@ -1,10 +1,10 @@
 ##grflangid 0x0c
 ##plural 1
 
-STR_GRF_DESC                                                                    :{ORANGE}FIRS工業擴展包{}{BLACK}由andythenorth, FooBar, planetmaker, Terkhen and Yexo以及其他貢獻者呈獻。 {SILVER}查看readme獲取更多信息，其中包括怎樣使用FIRS. {BLACK}License: GPL v2.
+STR_GRF_DESC                                                                    :{ORANGE}FIRS工業擴展包{}{BLACK}由andythenorth, FooBar, planetmaker, Terkhen and Yexo以及其他貢獻者呈獻。 {SILVER}查看readme獲取更多資訊，其中包括如何使用FIRS. {BLACK}License: GPL v2.
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :漁場、鑽井平台、疏浚區距離海岸的最大距離。
-STR_PARAM_DESC_ECONOMIES                                                        :每種經濟模式對應不同的貨物和工業組合。{}{}希望簡單遊戲的休閑玩家可以選擇{SILVER}基礎{BLACK}模式，其所提供的貨物與工業種類比其他FIRS經濟模式所提供的為少。{}{}FIRS網站提供各經濟模式的詳盡信息。
+STR_PARAM_DESC_ECONOMIES                                                        :每種經濟模式對應不同的貨物和工業組合。{}{}希望簡單遊戲的休閒玩家可以選擇{SILVER}基礎{BLACK}模式，其所提供的貨物與工業種類比其他FIRS經濟模式所提供的為少。{}{}FIRS網站提供各經濟模式的詳盡資訊。
 STR_PARAM_DESC_NO_OPENINGS                                                      :預設遊戲進行期間會修建新工業。{}{}如果選擇了{SILVER}禁止新建{BLACK}，則不會修建新工業，而玩家亦不可建立或者勘探工業。
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :海洋產業距離海岸的最大距離。
 STR_PARAM_NAME_ECONOMIES                                                        :經濟
@@ -13,48 +13,137 @@ STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         
 
 STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :改進基礎生產所需的物資（預設16）
 STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT                                       :「工合」基礎生產所需的物資（預設80）
-STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT                                        :農場、礦場與類似工業於滿足需求時會先至{SILVER}改進{BLACK}再達致{SILVER}「工合」{BLACK}，並獲相應生產水平。{}{}預設數字已經適合，然而你依然可於此更改。{}{}出口型工業為本值的8倍。
-STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             :改進基礎生產水平（%）
-STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :「工合」基礎生產水平（%）
-STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              :農場、礦場與類似工業於滿足需求時之生產（相對於{SILVER}正常{BLACK}生產水平） 。
+STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT                                        :農場、礦場與類似工業如何收到足夠物資，生產等級會先升至{SILVER}改進{BLACK}再達至{SILVER}「工合」{BLACK}，並提升產量。{}{}預設數字已經適切，但你依然可以於此更改。{}{}出口型工業為此值的8倍。
+STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS                                             :改進基礎生產等級（%）
+STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS                                             :「工合」基礎生產等級（%）
+STR_PARAM_DESC_PRIMARY_LEVEL_BONUS                                              :農場、礦場與類似工業於滿足需求時之生產（相對於{SILVER}正常{BLACK}生產等級） 。
+
+STR_PARAM_NAME_EXPERIMENTAL_FEATURES                                            :啟用實驗性功能
+STR_PARAM_DESC_EXPERIMENTAL_FEATURES                                            :開啟或關閉實驗性功能。
 
 STR_PARAM_VALUE_ECONOMIES_BASIC_TEMPERATE                                       :溫帶基礎經濟模式
 STR_PARAM_VALUE_ECONOMIES_BASIC_ARCTIC                                          :寒帶基礎經濟模式
 STR_PARAM_VALUE_ECONOMIES_BASIC_TROPIC                                          :熱帶基礎經濟模式
-STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                          :「炎熱國度」經濟模式
+STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                      :「炎熱國度」經濟模式
+STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :「鋼鐵城鎮」經濟模式
 
+STR_PARAM_NAME_OBJECTS                                                          :FIRS景觀物件
+STR_PARAM_DESC_OBJECTS                                                          :FIRS內含一系列的景觀物件，玩家可以用來擺設，讓某些工廠看起來更大一些。景觀物件對遊戲體驗沒有影響。景觀物件可以開關。
+
+STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   : {BLACK}（已供應）
+STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK}只要提供所需的{WHITE}任意{BLACK}貨物，就能以最高速率生產。
+STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}每三個月提供至少一次{WHITE}所有{BLACK}所需的貨物，才能以最高速率生產。
+STR_EXTRA_TEXT_TOWN_PRODUCER                                                    :{BLACK}生產量與城鎮人口成比例。每個月至少生產{WHITE}{SIGNED_WORD}單位{BLACK}，至多生產{WHITE}{SIGNED_WORD}單位{BLACK}的貨物。
+STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}當前產量: {YELLOW}標準{}{}{BLACK}要達到{WHITE}改進{BLACK}生產等級須每三個月運送{SIGNED_WORD}箱物資。要達到{WHITE}工合{BLACK}生產等級須運送{SIGNED_WORD}箱。
+STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}當前產量: {YELLOW}改進{}{}{BLACK}保持此生產等級須每三個月運送{SIGNED_WORD}箱物資。{}要達到{WHITE}工合{BLACK}生產等級須運送{SIGNED_WORD}箱。
+STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}當前產量: {YELLOW}工合{}{}{BLACK}保持此生產等級須每三個月運送{SKIP}{SIGNED_WORD}箱物資。
+STR_PORT_PRODUCTION_1X                                                          :{BLACK}當前產量: {YELLOW}標準{}{}{BLACK}要達到{WHITE}改進{BLACK}生產等級須每三個月運送{SIGNED_WORD}單位貨物。要達到{WHITE}工合{BLACK}生產等級須運送{SIGNED_WORD}單位。
+STR_PORT_PRODUCTION_2X                                                          :{BLACK}當前產量: {YELLOW}改進{}{}{BLACK}保持此生產等級須每三個月運送{SIGNED_WORD}單位貨物。{}要達到{WHITE}工合{BLACK}生產等級須運送{SIGNED_WORD}單位。
+STR_PORT_PRODUCTION_4X                                                          :{BLACK}當前產量: {YELLOW}工合{}{}{BLACK}保持此生產等級須每三個月運送{SKIP}{SIGNED_WORD}單位貨物。
+
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA                                                :{SKIP}{SKIP}人口情緒：{} {STRING}{STRING}{}{}{BLACK}樂觀分數： {STRING}{SIGNED_WORD} 分{P 2 "" s}{}{BLACK} 滿足的需求與奢侈品： {YELLOW}{SIGNED_WORD} 分{P 3 "" s} {}{BLACK} 污染與髒亂： {YELLOW}{SIGNED_WORD} 分{P 4 "" s} {}{}{BLACK}污染與髒亂會隨著人口和某些產業一同增長。{}{}需求與奢侈品可以藉由運送貨物至特定產業來滿足。{}{}如果樂觀分數大於10，人口情緒會達到{WHITE}樂觀{BLACK}。如果樂觀分數小於-10，人口情緒會達到{WHITE}悲觀{BLACK}。
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_OPTIMISTIC                                :樂觀
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_GLOOMY                                    :悲觀
+STR_INFORMATIVE_EXTRA_TEXT_PLAZA_MOOD_NEUTRAL                                   :平常
+
+STR_CARGO_NAME_ACID                                                             :酸
 STR_CARGO_NAME_ALCOHOL                                                          :酒
+STR_CARGO_NAME_ALLOY_STEEL                                                      :鋼合金
+STR_CARGO_NAME_ALUMINIUM                                                        :鋁
+STR_CARGO_NAME_ALUMINIA                                                         :Aluminia
+STR_CARGO_NAME_AMMONIA                                                          :氨
+STR_CARGO_NAME_AMMONIUM_NITRATE                                                 :硝酸銨
 STR_CARGO_NAME_BAUXITE                                                          :鋁土
 STR_CARGO_NAME_BEANS                                                            :豆
 STR_CARGO_NAME_BUILDING_MATERIALS                                               :建築材料
+STR_CARGO_NAME_CARBON_BLACK                                                     :碳黑
+STR_CARGO_NAME_CARBON_STEEL                                                     :碳鋼
 STR_CARGO_NAME_CASSAVA                                                          :木薯
+STR_CARGO_NAME_CAST_IRON                                                        :鑄鐵
+STR_CARGO_NAME_CEMENT                                                           :水泥
 STR_CARGO_NAME_CHEMICALS                                                        :化工品
-STR_CARGO_NAME_CLAY                                                             :粘土
+STR_CARGO_NAME_CHLORINE                                                         :氯
+STR_CARGO_NAME_CHROMITE_ORE                                                     :鉻礦
+STR_CARGO_NAME_CLAY                                                             :黏土
+STR_CARGO_NAME_CLEANING_AGENTS                                                  :清潔劑
 STR_CARGO_NAME_COFFEE                                                           :咖啡
+STR_CARGO_NAME_COAL_TAR                                                         :煤焦油
+STR_CARGO_NAME_COKE                                                             :焦炭
 STR_CARGO_NAME_COPPER                                                           :銅
+STR_CARGO_NAME_COPPER_CONCENTRATE                                               :濃縮銅
 STR_CARGO_NAME_EDIBLE_OIL                                                       :食用油
+STR_CARGO_NAME_ELECTRICAL_PARTS                                                 :電子元件
 STR_CARGO_NAME_ENGINEERING_SUPPLIES                                             :工程物資
+STR_CARGO_NAME_ETHYLENE                                                         :乙烯
+STR_CARGO_NAME_EXPLOSIVES                                                       :炸藥
+STR_CARGO_NAME_FERROCHROME                                                      :鉻鐵
 STR_CARGO_NAME_FIBRES                                                           :植物纖維
 STR_CARGO_NAME_FISH                                                             :魚
 STR_CARGO_NAME_FARM_SUPPLIES                                                    :農用物資
+STR_CARGO_NAME_FERTILISER                                                       :肥料
+STR_CARGO_NAME_FOOD_ADDITIVES                                                   :食品添加物
+STR_CARGO_NAME_FORMIC_ACID                                                      :甲酸
 STR_CARGO_NAME_FRUITS                                                           :水果
+STR_CARGO_NAME_FURNITURE                                                        :傢俱
+STR_CARGO_NAME_GLASS                                                            :玻璃
+STR_CARGO_NAME_HYDROCHLORIC_ACID                                                :鹽酸
+STR_CARGO_NAME_KAOLIN                                                           :瓷土
+STR_CARGO_NAME_LIMESTONE                                                        :石灰
+STR_CARGO_NAME_LOGS                                                             :原木
 STR_CARGO_NAME_TIMBER                                                           :木料
+STR_CARGO_NAME_LYE                                                              :氫氧化鈉
 STR_CARGO_NAME_METAL                                                            :金屬
+STR_CARGO_NAME_METHANE                                                          :甲烷
+STR_CARGO_NAME_METHANOL                                                         :甲醇
 STR_CARGO_NAME_MILK                                                             :牛奶
 STR_CARGO_NAME_MANGANESE                                                        :錳礦石
+STR_CARGO_NAME_NAPHTHA                                                          :石腦油
+STR_CARGO_NAME_NICKEL                                                           :鎳
 STR_CARGO_NAME_NITRATES                                                         :硝酸鹽
 STR_CARGO_NAME_NUTS                                                             :堅果
+STR_CARGO_NAME_OXYGEN                                                           :氧
+STR_CARGO_NAME_PACKAGING                                                        :包裝
+STR_CARGO_NAME_PAINTS_AND_COATINGS                                              :油漆與塗料
+STR_CARGO_NAME_PEAT                                                             :泥煤
 STR_CARGO_NAME_PETROL                                                           :汽油
 STR_CARGO_NAME_PHOSPHATE                                                        :磷礦
+STR_CARGO_NAME_PHOSPHORIC_ACID                                                  :磷酸
+STR_CARGO_NAME_PIG_IRON                                                         :生鐵
+STR_CARGO_NAME_PIPE                                                             :管線
+STR_CARGO_NAME_PLASTICS                                                         :塑膠
+STR_CARGO_NAME_POTASH                                                           :草鹼
+STR_CARGO_NAME_PROPYLENE                                                        :丙烯
 STR_CARGO_NAME_PYRITE_ORE                                                       :黃鐵礦
+STR_CARGO_NAME_QUICKLIME                                                        :生石灰
+STR_CARGO_NAME_RAW_LATEX                                                        :生乳膠
+STR_CARGO_NAME_REBAR                                                            :鋼筋
 STR_CARGO_NAME_RECYCLABLES                                                      :回收物資
+STR_CARGO_NAME_SALT                                                             :鹽
 STR_CARGO_NAME_SAND                                                             :沙子
 STR_CARGO_NAME_SCRAP_METAL                                                      :廢金屬
+STR_CARGO_NAME_SLAG                                                             :礦渣
+STR_CARGO_NAME_SODA_ASH                                                         :蘇打
+STR_CARGO_NAME_STAINLESS_STEEL                                                  :不鏽鋼
+STR_CARGO_NAME_STEEL                                                            :鋼鐵
+STR_CARGO_NAME_STEEL_SECTIONS                                                   :工字鋼
+STR_CARGO_NAME_STEEL_SHEET                                                      :鋼板
+STR_CARGO_NAME_STEEL_WIRE_ROD                                                   :鋼線材
 STR_CARGO_NAME_STONE                                                            :石料
 STR_CARGO_NAME_SUGAR_BEET                                                       :甜菜
+STR_CARGO_NAME_SULPHUR                                                          :硫
+STR_CARGO_NAME_SULPHURIC_ACID                                                   :硫酸
+STR_CARGO_NAME_TEXTILES                                                         :紡織品
+STR_CARGO_NAME_TIN                                                              :錫
+STR_CARGO_NAME_TINPLATE                                                         :馬口鐵
+STR_CARGO_NAME_TYRES                                                            :輪胎
+STR_CARGO_NAME_UREA                                                             :尿素
+STR_CARGO_NAME_VEHICLE_BODIES                                                   :汽車車身
+STR_CARGO_NAME_VEHICLE_ENGINES                                                  :汽車引擎
 STR_CARGO_NAME_VEHICLE_PARTS                                                    :汽車零件
 STR_CARGO_NAME_VEHICLES                                                         :汽車
 STR_CARGO_NAME_WOOL                                                             :羊毛
+STR_CARGO_NAME_YARN                                                             :毛線
+STR_CARGO_NAME_ZINC                                                             :鋅
 
 STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} 酒
 STR_CARGO_UNIT_BAUXITE                                                          :{WEIGHT} 鋁土
@@ -189,12 +278,6 @@ STR_IND_TYRE_PLANT                                                              
 STR_IND_VINEYARD                                                                :葡萄園
 
 
-STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}當前產量: {YELLOW}標准{}{}{BLACK}要取得{WHITE}改進{BLACK}生產水平須於三個月內交付{SIGNED_WORD}箱要取得{WHITE}工合{BLACK}生產水平須交付{SIGNED_WORD}箱
-STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}當前產量: {YELLOW}改進{}{}{BLACK}保持此生產水平須於三個月內交付{SIGNED_WORD}箱物資{}要取得{WHITE}工合{BLACK}生產水平須交付{SIGNED_WORD}箱
-STR_PRIMARY_PRODUCTION_4X                                                       :{BLACK}當前產量: {YELLOW}工合{}{}{BLACK}保持此生產水平須於三個月內交付{SKIP}{SIGNED_WORD}箱物資
-STR_PORT_PRODUCTION_1X                                                          :{BLACK}當前產量: {YELLOW}標准{}{}{BLACK}要取得{WHITE}改進{BLACK}生產水平須於三個月內交付{SIGNED_WORD}箱要取得{WHITE}工合{BLACK}生產水平須交付{SIGNED_WORD}箱
-STR_PORT_PRODUCTION_2X                                                          :{BLACK}當前產量: {YELLOW}改進{}{}{BLACK}保持此生產水平須於三個月內交付{SIGNED_WORD}箱物資{}要取得{WHITE}工合{BLACK}生產水平須交付{SIGNED_WORD}箱
-STR_PORT_PRODUCTION_4X                                                          :{BLACK}當前產量: {YELLOW}工合{}{}{BLACK}保持此生產水平須於三個月內交付{SKIP}{SIGNED_WORD}箱物資
 STR_GENERIC_NEWLINE                                                             :{}
 
 STR_FUND_ARABLE_FARM                                                            :{}{BLACK}位置: {YELLOW}不得修建於雪地或者沙漠。
